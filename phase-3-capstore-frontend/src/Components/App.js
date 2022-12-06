@@ -1,6 +1,8 @@
 // import logo from './logo.svg';
 import '../App.css';
 import React, {useEffect, useState} from 'react';
+import NavBar from './NavBar';
+import Switch // stopped here
 
 
 const API = "http://localhost:9292/stores"
@@ -23,6 +25,7 @@ function App() {
 
   return (
    <div>
+    <NavBar/>
     
    </div>
   )
