@@ -7,11 +7,11 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/stores" do
-    Store.all.to_json
+    Store.all.to_json(include: :inventories)
   end
 
-  get "/inventories" do
-    Inventory.all.to_json
-  end
+  # get "/:id" do
+  #   Inventory.all.to_json
+  # end
 
 end
