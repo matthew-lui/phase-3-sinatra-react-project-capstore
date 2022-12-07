@@ -7,9 +7,9 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/stores" do
-    Store.all.to_json(include: :inventories)
+    Store.all.to_json()
   end
-
+ #(include: :inventories)
 
   get "/inventories" do
     Inventory.all.to_json()
@@ -18,18 +18,18 @@ class ApplicationController < Sinatra::Base
 
   post "/inventories" do
     #binding.pry
-    Inventory.create(hat_name: params[:hat_name], store_id: params[:store_id]).to_json
+    Inventory.create(hat_name: params[:hat_name], store_id: params[:store_id]).to_json()
   end
 
 
   # post "/inventories" do
   #   #binding.pry
-  # inventory = Inventory.create(hat_name: params[:hat_name], price: params[:price], quantity: params[:quantity], image_url: params[:image_url], description: params[:description], store_id: params[:store_id]).to_json()
+  # inventory = Inventory.create(hat_name: params[:hat_name], price: params[:price], quantity: params[:quantity], image_url: params[:image_url], description: params[:description], store_id: params[:store_id]).to_json
   # end
 
-  # delete "/inventories/:id" do 
-  # inventory = Inventory.find(params[:id]).destroy()
-  # end
+  delete "/inventories/:id" do 
+  inventory = Inventory.find(params[:id]).destroy
+  end
 
   # patch "/inventories/:id" do
   # inventory = Inventory.find(params[:id])
