@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Inventory from './Inventory';
 
-function InventoryContainer({ hatData, setHat }) {
+function InventoryContainer({ hatData, setHat, onDeleteHat}) {
     let initialForm = {
         hat_name: "",
         image_url:"",
@@ -47,7 +47,7 @@ function InventoryContainer({ hatData, setHat }) {
 
             <h3>All Items</h3>
             {
-                hatData.map(hat => <Inventory hat={hat} key={hat.id} setHat={setHat} />)
+                hatData.map(hat => <Inventory hat={hat} key={hat.id} setHat={setHat} onDeleteHat={onDeleteHat}/>)
             }
         </div>
     );

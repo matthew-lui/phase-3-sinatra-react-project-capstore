@@ -1,6 +1,19 @@
 import React, {useState} from "react"
 
-function Inventory({hat}) {
+const headers = {
+    Accepts: "application/json",
+          "Content-Type" : "application/json"}
+
+function Inventory({hat, onDeleteHat}) {
+
+    function handleDelete(id){
+        onDeleteHat(id)
+        fetch(`http://localhost:9292/inventories/${id}`,{
+            method: 'DELETE',
+            headers,
+        })
+    }
+
 
     return (
 
@@ -8,7 +21,7 @@ function Inventory({hat}) {
             <ul>
                 <li>
                     <h3>${hat.price} {hat.quantity} <img className="hat_images" src={hat.image_url}/> {hat.hat_name} {hat.description} </h3>
-                    <button>Delete</button>
+                    <button onClick={()=>handleDelete(hat.id)}>Delete</button>
                 </li>
             </ul>
 

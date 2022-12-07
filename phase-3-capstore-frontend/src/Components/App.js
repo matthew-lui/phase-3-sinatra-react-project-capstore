@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import '../App.css';
 import React, {useEffect, useState} from 'react';
 import NavBar from './NavBar';
@@ -23,7 +22,7 @@ function App() {
       setStoreData(arrayOfData)
       );
   }, [])
-  // console.log(storeData)
+
 
   useEffect(() => {
     fetch(API2)
@@ -32,18 +31,13 @@ function App() {
       setHatData(arrayOfHatData)
       );
   }, [])
-// console.log(hatData)
 
 
-
-
-// const allTheHats = hatData.map((hatObj) => {
-//   return <Inventory hatObj={hatObj} key={hatObj.id}/>
-// })
-
-// console.log(allTheHats)
-
-//not sure if this is working! 
+ function handleDeleteHat(id){
+  const updateHatArray = hatData.filter(hats=> hats.id !==id)
+  setHatData(updateHatArray)
+ 
+ }
 
   return (
     <div className='App'>
@@ -57,7 +51,7 @@ function App() {
          
       
           <Route path ="/Inventory">
-            <InventoryContainer hatData={hatData} setHat={setHatData}/>
+            <InventoryContainer hatData={hatData} setHat={setHatData} onDeleteHat={handleDeleteHat}/>
           </Route>
           
           <Route  path="/Stores">
