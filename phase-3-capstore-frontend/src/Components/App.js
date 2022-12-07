@@ -3,11 +3,9 @@ import '../App.css';
 import React, {useEffect, useState} from 'react';
 import NavBar from './NavBar';
 import {Switch, Route} from 'react-router-dom'
-import InventoryForm from './InventoryForm';
 import StoreCardContainer from './StoreCardContainer';
 import Home from './Home'
 import Stores from './Stores';
-import Inventory from './Inventory';
 import InventoryContainer from './InventoryContainer';
 
 const API= "http://localhost:9292/stores"
@@ -59,7 +57,7 @@ function App() {
          
       
           <Route path ="/Inventory">
-            <InventoryContainer hatData={hatData}/>
+            <InventoryContainer hatData={hatData} setHat={setHatData}/>
           </Route>
           
           <Route  path="/Stores">

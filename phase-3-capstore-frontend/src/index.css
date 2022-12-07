@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.hat_images {
+max-width: 200px;
+height: 300px;
+min-height: 300px;
+}

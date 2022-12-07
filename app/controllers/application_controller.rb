@@ -16,16 +16,16 @@ class ApplicationController < Sinatra::Base
   end
 
 
-  post "/inventories" do
-    #binding.pry
-    Inventory.create(hat_name: params[:hat_name], store_id: params[:store_id]).to_json()
-  end
-
-
   # post "/inventories" do
   #   #binding.pry
-  # inventory = Inventory.create(hat_name: params[:hat_name], price: params[:price], quantity: params[:quantity], image_url: params[:image_url], description: params[:description], store_id: params[:store_id]).to_json
+  #   Inventory.create(hat_name: params[:hat_name], store_id: params[:store_id]).to_json()
   # end
+
+
+  post "/inventories" do
+    #binding.pry
+  inventory = Inventory.create(hat_name: params[:hat_name], price: params[:price], quantity: params[:quantity], image_url: params[:image_url], description: params[:description], store_id: params[:store_id]).to_json
+  end
 
   delete "/inventories/:id" do 
   inventory = Inventory.find(params[:id]).destroy

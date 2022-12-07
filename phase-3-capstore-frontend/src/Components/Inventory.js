@@ -2,20 +2,13 @@ import React, {useState} from "react"
 
 function Inventory({hat}) {
 
-    // const hatData = {hat}
-
-    // console.log(allTheHats)
-
     return (
 
-
-
-
         <>
-            <h2>Inventory</h2>
             <ul>
                 <li>
-                    <h3>{hat.price}</h3>
+                    <h3>${hat.price} {hat.quantity} <img className="hat_images" src={hat.image_url}/> {hat.hat_name} {hat.description} </h3>
+                    <button>Delete</button>
                 </li>
             </ul>
 
