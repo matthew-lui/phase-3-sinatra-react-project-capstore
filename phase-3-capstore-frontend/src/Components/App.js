@@ -4,7 +4,6 @@ import NavBar from './NavBar';
 import {Switch, Route} from 'react-router-dom'
 import StoreCardContainer from './StoreCardContainer';
 import Home from './Home'
-import Stores from './Stores';
 import InventoryContainer from './InventoryContainer';
 
 const API= "http://localhost:9292/stores"
@@ -55,7 +54,7 @@ function App() {
           </Route>
           
           <Route  path="/Stores">
-            <Stores/>
+            <StoreCardContainer storeData={storeData} setStoreData={setStoreData}/>
           </Route>
           
           

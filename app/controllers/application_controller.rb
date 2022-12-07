@@ -21,6 +21,11 @@ class ApplicationController < Sinatra::Base
   #   Inventory.create(hat_name: params[:hat_name], store_id: params[:store_id]).to_json()
   # end
 
+  post "/stores" do
+    #binding.pry
+    Store.create(store_name: params[:store_name], phone_number: params[:phone_number], address: params[:address]).to_json
+  end
+
 
   post "/inventories" do
     #binding.pry
@@ -31,13 +36,10 @@ class ApplicationController < Sinatra::Base
   inventory = Inventory.find(params[:id]).destroy
   end
 
-  # patch "/inventories/:id" do
-  # inventory = Inventory.find(params[:id])
-  # inventory.update(quantity: params[:quantity], price: params[:price], image_url: params[:image_url]).to_json()
-  # end
+  patch "/inventories/:id" do
+  inventory = Inventory.find(params[:id])
+  inventory.update(quantity: params[:quantity], price: params[:price]).to_json
+  end
 
-  # get "/:id" do
-  #   Inventory.all.to_json
-  # end
-
+  
 end

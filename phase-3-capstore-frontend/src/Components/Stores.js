@@ -1,10 +1,10 @@
 import React, {useState} from "react"
 
-function Stores() {
+function Stores({store}) {
     return (
         <>
             <h1>Hi! this is our main managenent page.</h1>
-            <h3>pick the store youd like to see inventory for:</h3>
+            <h3>Our Stores {store.store_name}</h3>
            
         </>
     )

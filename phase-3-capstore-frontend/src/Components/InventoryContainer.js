@@ -42,7 +42,7 @@ function InventoryContainer({ hatData, setHat, onDeleteHat}) {
                 <input value={form.quantity} placeholder="Quantity" name="quantity" type="number" onChange={handleChange} />
                 <input value={form.image_url} placeholder="Image URL" name="image_url" type="text" onChange={handleChange} />
                 <input value={form.description} placeholder="Description" name="description" type="text" onChange={handleChange} />
-                <button id="formBtn">Add Hat</button>
+                <button class="button-29" id="formBtn">Add Hat</button>
             </form>
 
             <h3>All Items</h3>

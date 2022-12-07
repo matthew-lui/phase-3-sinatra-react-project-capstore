@@ -21,7 +21,7 @@ function Inventory({hat, onDeleteHat}) {
             <ul>
                 <li>
                     <h3>${hat.price} {hat.quantity} <img className="hat_images" src={hat.image_url}/> {hat.hat_name} {hat.description} </h3>
-                    <button onClick={()=>handleDelete(hat.id)}>Delete</button>
+                    <button class="button-29"onClick={()=>handleDelete(hat.id)}>Delete</button><button class="button-29">edit</button>
                 </li>
             </ul>
 
