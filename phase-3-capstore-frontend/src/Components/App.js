@@ -41,19 +41,12 @@ function App() {
     setHatData(updateHatArray)
   }
 
-  function updateHatLikes(hatData) {
-    fetch(`${API2}/${hatData.id}`, {
-      method: "PATCH",
-      headers,
-      body: JSON.stringify({ likes: hatData.likes + 1 }),
-    }).then(() => setHatData(theHat => theHat.id != hatData.id ? theHat : { ...theHat, likes: theHat.likes + 1 }))
-  }
 
   // search
 
   const [searchText, setSearchText] = useState("")
 
-  const filteredHats = hatData.filter((eachHatObj) => {
+  const filteredHats = hatData.filter((eachHatObj) => { 
     return eachHatObj.hat_name.toLowerCase().includes(searchText.toLowerCase())
   })
 
@@ -61,7 +54,7 @@ function App() {
 
   function handleDeleteStore(id) {
     const updateStoresArray = storeData.filter(store => store.id !== id)
-    setHatData(updateStoresArray)
+    setStoreData(updateStoresArray)
   }
 
 
@@ -76,7 +69,7 @@ function App() {
         </Route>
         <Route path="/Inventory">
           <Search searchText={searchText} setSearchText={setSearchText} />
-          <InventoryContainer hatData={filteredHats} setHat={setHatData} onDeleteHat={handleDeleteHat} updateHat={updateHatLikes} />
+          <InventoryContainer hatData={filteredHats} setHat={setHatData} onDeleteHat={handleDeleteHat}  />
         </Route>
 
         <Route path="/Stores">

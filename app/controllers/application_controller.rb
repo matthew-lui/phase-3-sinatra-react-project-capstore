@@ -37,8 +37,9 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "/inventories/:id" do
-    Inventory.find(params[:id])
-    Inventory.update(likes: params[:likes]).to_json
+    inventory = Inventory.find(params[:id])
+    inventory.update(likes: params[:likes])
+    inventory.to_json
   end
 
   delete "/stores/:id" do 
