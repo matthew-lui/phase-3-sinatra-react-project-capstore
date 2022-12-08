@@ -29,17 +29,19 @@ class ApplicationController < Sinatra::Base
 
   post "/inventories" do
     #binding.pry
-  inventory = Inventory.create(hat_name: params[:hat_name], price: params[:price], quantity: params[:quantity], image_url: params[:image_url], description: params[:description], store_id: params[:store_id]).to_json
+    Inventory.create(hat_name: params[:hat_name], price: params[:price], quantity: params[:quantity], image_url: params[:image_url], description: params[:description], store_id: params[:store_id]).to_json
   end
 
   delete "/inventories/:id" do 
-  inventory = Inventory.find(params[:id]).destroy
+    Inventory.find(params[:id]).destroy
   end
 
   patch "/inventories/:id" do
-  inventory = Inventory.find(params[:id])
-  inventory.update(quantity: params[:quantity], price: params[:price]).to_json
+    Inventory.find(params[:id])
+    Inventory.update(quantity: params[:quantity], price: params[:price]).to_json
   end
 
-  
+  # delete "/stores/:id" do 
+  #   Store.find(params[:id]).destroy
+  # end
 end

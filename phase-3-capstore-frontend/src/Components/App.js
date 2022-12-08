@@ -35,8 +35,23 @@ function App() {
  function handleDeleteHat(id){
   const updateHatArray = hatData.filter(hats=> hats.id !==id)
   setHatData(updateHatArray)
- 
- }
+}
+
+function updateHat(id){
+  const updateInventory = {
+    quantity: "",
+    price: "",
+    image_url: ""
+  }
+  fetch(`http://localhost:9292/inventories/${id}`,{
+    method: "PATCH",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify(updateInventory)
+
+  }).then(res => res.json())
+    .then(setHatData)
+}
+
 
   return (
     <div className='App'>
@@ -46,21 +61,16 @@ function App() {
           <Route  exact path= '/'>
             <Home/>
           </Route>
-         
-         
-      
           <Route path ="/Inventory">
-            <InventoryContainer hatData={hatData} setHat={setHatData} onDeleteHat={handleDeleteHat}/>
+            <InventoryContainer hatData={hatData} setHat={setHatData} onDeleteHat={handleDeleteHat} updateHat={updateHat}/>
           </Route>
           
           <Route  path="/Stores">
             <StoreCardContainer storeData={storeData} setStoreData={setStoreData}/>
           </Route>
-          
-          
-            
-         
-        
+          <Route path="*">
+             <h1>404 Not Found</h1>
+          </Route>
         </Switch>
     </div>
   )

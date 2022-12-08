@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom'
 function NavBar() {
     return (
         <div className="navbar-div">
-            <h1 className="nav-title">NoCap</h1>
+            <h1 className="nav-title">No Cap : We have every Cap</h1>
             <NavLink to="/">
                 <a className="nav-links">Home</a>
             </NavLink>
