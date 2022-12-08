@@ -16,6 +16,8 @@ function Inventory({hat, onDeleteHat}) {
             setHatData({...data})
         }))
     }
+
+    console.log(hatData)
     function handleDelete(id){
         onDeleteHat(id)
         fetch(`http://localhost:9292/inventories/${id}`,{
