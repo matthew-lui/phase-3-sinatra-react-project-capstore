@@ -1,7 +1,7 @@
 body {
   background-color: #d4d4d4;
   margin: 0;
-  font-family: 'Rufina', serif;
+  font-family: 'Yeseva One', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -60,7 +60,46 @@ border-width: thick;
   .hat_names {
     color: #61304B;
   }
+
+  .input_field {
+    width: 20%;
+    /* margin: 20px; */
+    width: 60%;
+    height: 28px;
+    border-radius: 5px;
+  }
   
+  #submit_btn {
+    /* position: relative; */
+    /* margin: 200px; */
+    width: 10%;
+    height: 5%;
+    left: 20px;
+    top: 10px;
+    
+  }
+  #desc {
+   margin-left: 176px;
+   margin-top: 10px;
+  }
+
+  #search {
+    position: absolute;
+    bottom: 20px;
+    top:672px;
+    left: 500px;
+    margin-top: px;
+  }
+  .search-input {
+    margin-left: 15px;
+    border-radius: 5px;
+  }
+
+
+
+
+
+
   /* <!-- HTML !-->
   <button class="button-85" role="button">Button 85</button> */
   

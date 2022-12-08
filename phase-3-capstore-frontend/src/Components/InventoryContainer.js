@@ -33,12 +33,16 @@ function InventoryContainer({ hatData, setHat, onDeleteHat}) {
 
             <h3>Add Item to Inventory</h3>
             <form id="form" onSubmit={handleSubmit}>
-                <input value={form.hat_name} placeholder="Hat name" name="hat_name" type="text" onChange={handleChange} />
-                <input value={form.price} placeholder="Price" name="price" type="number" onChange={handleChange} />
-                <input value={form.quantity} placeholder="Quantity" name="quantity" type="number" onChange={handleChange} />
-                <input value={form.image_url} placeholder="Image URL" name="image_url" type="text" onChange={handleChange} />
-                <input value={form.description} placeholder="Description" name="description" type="text" onChange={handleChange} />
-                <button className="button-85">Add Hat</button>
+                <input className="input_field" value={form.hat_name} placeholder="Hat name" name="hat_name" type="text" onChange={handleChange} />
+                <input className="input_field" value={form.price} placeholder="Price" name="price" type="number" onChange={handleChange} />
+                <input className="input_field" value={form.quantity} placeholder="Quantity" name="quantity" type="number" onChange={handleChange} />
+                <input className="input_field" value={form.image_url} placeholder="Image URL" name="image_url" type="text" onChange={handleChange} />
+                <input id="desc" className="input_field" value={form.description} placeholder="Description" name="description" type="text" onChange={handleChange} />
+                <br/>
+                <br/>
+                <br/>
+                <button id="submit_btn" className="button-85">Add Hat</button>
+                <br/>
             </form>
 
             <h3>All Items</h3>

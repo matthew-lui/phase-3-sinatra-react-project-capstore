@@ -2,9 +2,10 @@ import React from 'react';
 
 function Search({setSearchText, searchText}) {
     return (
-        <div>
-            <label>Search Inventory</label>
+        <div id="search">
+            <label>Search Inventory:</label>
             <input
+                className="search-input"
                 type="text"
                 name="search"
                 placeholder="search inventory"

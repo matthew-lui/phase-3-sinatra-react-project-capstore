@@ -10,7 +10,7 @@ function Inventory({hat, onDeleteHat}) {
         fetch(`http://localhost:9292/inventories/${hat.id}`, {
           method: "PATCH",
           headers,
-          body: JSON.stringify({ likes: hat.likes + 1 }),
+          body: JSON.stringify({ likes: ++hat.likes }),
         }).then((r) =>r.json())
         .then(((data)=>{
             setHatData({...data})
@@ -38,7 +38,7 @@ function Inventory({hat, onDeleteHat}) {
                     <p><b>Quantity:</b> {hatData.quantity}</p>
                     <p><b>Description:</b> {hatData.description}</p>
                     <p>Total  {hatData.likes}🧢</p>
-                    <button className="button-85"onClick={()=>handleDelete(hatData.id)}>Delete</button> <button onClick={()=>updateHatLikes(hatData)}className="button-85"> +🧢</button>
+                    <button className="button-85"onClick={()=>handleDelete(hatData.id)}>🗑</button> <button onClick={()=>updateHatLikes(hatData)}className="button-85"> +🧢</button>
                 </li>
             </ul>
 

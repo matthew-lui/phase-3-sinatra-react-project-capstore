@@ -70,6 +70,7 @@ function App() {
         <Route path="/Inventory">
           <Search searchText={searchText} setSearchText={setSearchText} />
           <InventoryContainer hatData={filteredHats} setHat={setHatData} onDeleteHat={handleDeleteHat}  />
+          
         </Route>
 
         <Route path="/Stores">
