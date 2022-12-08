@@ -6,16 +6,16 @@ function NavBar() {
         <div className="navbar-div">
             <h1 className="nav-title">NoCap</h1>
             <NavLink to="/">
-                <a className="nav-links"><span>Home</span></a>
+                <a className="nav-links">Home</a>
             </NavLink>
             <NavLink to="/Stores">
-                <a className="nav-links"><span>Stores</span></a>
+                <a className="nav-links">Stores</a>
             </NavLink>
             <NavLink to="/search">
-                <a className="nav-links"><span>Search</span></a>
+                <a className="nav-links">Search</a>
             </NavLink>
             <NavLink to="/inventory">
-                <a className="nav-links"><span>Inventory</span></a>
+                <a className="nav-links">Inventory</a>
             </NavLink>
         </div>
 

@@ -39,7 +39,7 @@ return (
                 <input value={storeForm.store_name} placeholder="store name" name="store_name" type="text" onChange={handleChange} />
                 <input value={storeForm.address} placeholder="address" name="address" type="text" onChange={handleChange} />
                 <input value={storeForm.phone_number} placeholder="phone number" name="phone_number" type="number" onChange={handleChange} />
-                <button class="button-30" id="addStoreBtn">Add Store</button>
+                <button className="button-85" id="addStoreBtn">Add Store</button>
             </form>
 
             <h3>All Stores</h3>

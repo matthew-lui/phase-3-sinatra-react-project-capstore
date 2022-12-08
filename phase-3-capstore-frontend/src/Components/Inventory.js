@@ -18,10 +18,14 @@ function Inventory({hat, onDeleteHat}) {
     return (
 
         <>
-            <ul>
-                <li>
-                    <h3>${hat.price} {hat.quantity} <img className="hat_images" src={hat.image_url}/> {hat.hat_name} {hat.description} </h3>
-                    <button class="button-29"onClick={()=>handleDelete(hat.id)}>Delete</button><button class="button-29">edit</button>
+            <ul id="hat_container">
+                <li className="list_items">
+                    <h3 className="hat_names">{hat.hat_name}</h3>
+                    <img className="hat_images" src={hat.image_url}/>
+                    <p><b>Price:</b> ${hat.price}</p> 
+                    <p><b>Quantity:</b> {hat.quantity}</p>
+                    <p><b>Description:</b> {hat.description}</p>
+                    <button className="button-85"onClick={()=>handleDelete(hat.id)}>Delete</button> <button className="button-85">edit</button>
                 </li>
             </ul>
 
