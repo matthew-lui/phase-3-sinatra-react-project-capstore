@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import Stores from './Stores'
 
-function StoreCardContainer({storeData, setStoreData}) {
+function StoreCardContainer({storeData, setStoreData, onDeleteStore}) {
         let initialStoreForm = {
             store_name: "",
             address:"",
@@ -44,7 +44,7 @@ return (
 
             <h3>All Stores</h3>
             {
-                storeData.map(store => <Stores store={store} key={store.id}/>)
+                storeData.map(store => <Stores store={store} key={store.id} onDeleteStore={onDeleteStore}/>)
             }
         </div>
     </>

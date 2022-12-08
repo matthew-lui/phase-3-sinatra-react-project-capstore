@@ -5,6 +5,7 @@ const headers = {
           "Content-Type" : "application/json"}
 
 function Inventory({hat, onDeleteHat, updateHat}) {
+    console.log(hat)
 
     function handleDelete(id){
         onDeleteHat(id)
@@ -25,7 +26,8 @@ function Inventory({hat, onDeleteHat, updateHat}) {
                     <p><b>Price:</b> ${hat.price}</p> 
                     <p><b>Quantity:</b> {hat.quantity}</p>
                     <p><b>Description:</b> {hat.description}</p>
-                    <button className="button-85"onClick={()=>handleDelete(hat.id)}>Delete</button> <button onClick={updateHat}className="button-85">edit</button>
+                    <p>Total  {hat.likes}🧢</p>
+                    <button className="button-85"onClick={()=>handleDelete(hat.id)}>Delete</button> <button onClick={()=>updateHat(hat)}className="button-85"> +🧢</button>
                 </li>
             </ul>
 

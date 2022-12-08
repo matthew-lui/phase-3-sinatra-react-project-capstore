@@ -7,6 +7,7 @@ class CreateInventories < ActiveRecord::Migration[6.1]
           t.string :image_url
           t.text :description
           t.integer :store_id
+          t.integer :likes
     end
   end
 end

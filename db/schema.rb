@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2022_12_06_152054) do
     t.string "image_url"
     t.text "description"
     t.integer "store_id"
+    t.integer "likes"
   end
 
   create_table "stores", force: :cascade do |t|
