@@ -28,21 +28,20 @@ function Inventory({hat, onDeleteHat}) {
 
 
     return (
+        <div className="hat-background">
+            <fieldset className="fieldset">
 
-        <>
-            <ul id="hat_container">
                 <li className="list_items">
                     <h3 className="hat_names">{hatData.hat_name}</h3>
                     <img className="hat_images" src={hatData.image_url}/>
-                    <p><b>Price:</b> ${hatData.price}</p> 
-                    <p><b>Quantity:</b> {hatData.quantity}</p>
-                    <p><b>Description:</b> {hatData.description}</p>
-                    <p>Total  {hatData.likes}🧢</p>
+                    <p className="hat_names"><b>Price:</b> ${hatData.price}</p> 
+                    <p className="hat_names"><b>Quantity:</b> {hatData.quantity}</p>
+                    <p className="hat_names"><b>Description:</b> {hatData.description}</p>
+                    <p className="hat_names">Total  {hatData.likes}🧢</p>
                     <button className="button-85"onClick={()=>handleDelete(hatData.id)}>🗑</button> <button onClick={()=>updateHatLikes(hatData)}className="button-85"> +🧢</button>
                 </li>
-            </ul>
-
-        </>
+                </fieldset>
+        </div>
     )
 
 

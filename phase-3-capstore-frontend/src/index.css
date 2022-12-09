@@ -24,6 +24,7 @@ border-width: thick;
 
 .list_items {
   list-style: none;
+  max-width: 300px;
 }
   
   h1 {
@@ -46,10 +47,10 @@ border-width: thick;
   }
 
   #form {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: center;
+    justify-content: center; */
   }
   
   .navbar-div {
@@ -58,41 +59,46 @@ border-width: thick;
   }
 
   .hat_names {
-    color: #61304B;
+    color: white;
   }
 
   .input_field {
-    width: 20%;
-    /* margin: 20px; */
-    width: 60%;
+    /* width: 20%;
+    width: 60%;*/
     height: 28px;
     border-radius: 5px;
+    margin: 10px;
   }
   
   #submit_btn {
     /* position: relative; */
     /* margin: 200px; */
-    width: 10%;
+    /* width: 10%;
     height: 5%;
     left: 20px;
-    top: 10px;
+    top: 10px; */
     
   }
   #desc {
-   margin-left: 176px;
-   margin-top: 10px;
+   /* margin-left: 176px;
+   margin-top: 10px; */
   }
 
   #search {
-    position: absolute;
+    /* position: absolute;
     bottom: 20px;
     top:672px;
-    left: 500px;
-    margin-top: px;
+    left: 500px;*/
+    margin-top: 30px;
   }
   .search-input {
     margin-left: 15px;
     border-radius: 5px;
+    height: 28px;
+  }
+
+  h2 {
+    font-size: 60px;
   }
 
 
@@ -191,6 +197,16 @@ border-width: thick;
     border: 1px solid red;
   } */
   
+.hat-background {
+  background-color: #5C0029;
+  box-shadow: 5px 5px;
+  
+  border-radius: 5px;
+}
 
-
+.fieldset {
+  border: auto;
+  border: 2px groove;
+  border-color: aquamarine;
+}
 

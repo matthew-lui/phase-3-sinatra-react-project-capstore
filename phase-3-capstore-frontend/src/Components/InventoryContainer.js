@@ -38,17 +38,16 @@ function InventoryContainer({ hatData, setHat, onDeleteHat}) {
                 <input className="input_field" value={form.quantity} placeholder="Quantity" name="quantity" type="number" onChange={handleChange} />
                 <input className="input_field" value={form.image_url} placeholder="Image URL" name="image_url" type="text" onChange={handleChange} />
                 <input id="desc" className="input_field" value={form.description} placeholder="Description" name="description" type="text" onChange={handleChange} />
-                <br/>
-                <br/>
-                <br/>
                 <button id="submit_btn" className="button-85">Add Hat</button>
                 <br/>
             </form>
 
             <h3>All Items</h3>
-            {
-                hatData.map(hat => <Inventory hat={hat} key={hat.id} setHat={setHat} onDeleteHat={onDeleteHat}/>)
-            }
+                <ul id="hat_container">
+                    {
+                        hatData.map(hat => <Inventory hat={hat} key={hat.id} setHat={setHat} onDeleteHat={onDeleteHat}/>)
+                    }
+                </ul>
         </div>
     );
 }

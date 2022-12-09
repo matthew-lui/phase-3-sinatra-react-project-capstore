@@ -19,7 +19,7 @@ function Stores({store, onDeleteStore}) {
             <h3>Store Name: {store.store_name}</h3>
             <h4>Address {store.address}</h4>
             <h4>Phone Number {store.phone_number}</h4>
-            <button className="button-95"onClick={()=>handleDeleteStore(store.id)}>Delete</button>
+            <button className="button-85"onClick={()=>handleDeleteStore(store.id)}>Delete Store</button>
         </div>
     )
 

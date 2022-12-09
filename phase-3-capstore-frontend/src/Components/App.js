@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 import StoreCardContainer from './StoreCardContainer';
 import InventoryContainer from './InventoryContainer';
 import Search from './Search'
+import Home from './Home'
 
 const API = "http://localhost:9292/stores"
 const API2 = "http://localhost:9292/inventories"
@@ -62,15 +63,15 @@ function App() {
 
   return (
     <div className='App'>
-
       <NavBar />
       <Switch>
         <Route exact path='/'>
+          <Home/>
         </Route>
         <Route path="/Inventory">
           <Search searchText={searchText} setSearchText={setSearchText} />
           <InventoryContainer hatData={filteredHats} setHat={setHatData} onDeleteHat={handleDeleteHat}  />
-          
+
         </Route>
 
         <Route path="/Stores">

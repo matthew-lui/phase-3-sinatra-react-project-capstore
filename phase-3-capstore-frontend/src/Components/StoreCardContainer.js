@@ -36,9 +36,9 @@ return (
 
             <h3>Add Store</h3>
             <form id="form" onSubmit={handleSubmit}>
-                <input value={storeForm.store_name} placeholder="store name" name="store_name" type="text" onChange={handleChange} />
-                <input value={storeForm.address} placeholder="address" name="address" type="text" onChange={handleChange} />
-                <input value={storeForm.phone_number} placeholder="phone number" name="phone_number" type="number" onChange={handleChange} />
+                <input className="input_field" value={storeForm.store_name} placeholder="store name" name="store_name" type="text" onChange={handleChange} />
+                <input className="input_field" value={storeForm.address} placeholder="address" name="address" type="text" onChange={handleChange} />
+                <input className="input_field" value={storeForm.phone_number} placeholder="phone number" name="phone_number" type="number" onChange={handleChange} />
                 <button className="button-85" id="addStoreBtn">Add Store</button>
             </form>
 
