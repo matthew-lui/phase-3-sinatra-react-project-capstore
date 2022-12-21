@@ -4,6 +4,7 @@ import NavBar from './NavBar';
 import { Switch, Route } from 'react-router-dom'
 import StoreCardContainer from './StoreCardContainer';
 import InventoryContainer from './InventoryContainer';
+import InventoryShow from './InventoryShow';
 import Search from './Search'
 import Home from './Home'
 
@@ -73,6 +74,10 @@ function App() {
           <InventoryContainer hatData={filteredHats} setHat={setHatData} onDeleteHat={handleDeleteHat}  />
 
         </Route>
+        
+          <Route path="/Inventory/:id">
+            <InventoryShow />
+          </Route>
 
         <Route path="/Stores">
           <StoreCardContainer storeData={storeData} setStoreData={setStoreData} onDeleteStore={handleDeleteStore} />

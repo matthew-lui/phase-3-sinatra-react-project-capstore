@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import {useHistory} from "react-router-dom"
 
 const headers = {
     Accepts: "application/json",
@@ -6,6 +7,10 @@ const headers = {
 
 function Inventory({hat, onDeleteHat}) {
     const [hatData, setHatData] = useState(hat)
+    const history = useHistory()
+    function handleClick(){
+        history.push(`/inventories/${hatData.id}`)
+    }
     function updateHatLikes() {
         fetch(`http://localhost:9292/inventories/${hat.id}`, {
           method: "PATCH",
@@ -33,7 +38,7 @@ function Inventory({hat, onDeleteHat}) {
 
                 <li className="list_items">
                     <h3 className="hat_names">{hatData.hat_name}</h3>
-                    <img className="hat_images" src={hatData.image_url}/>
+                    <img className="hat_images" onClick={handleClick}src={hatData.image_url}/>
                     <p className="hat_names"><b>Price:</b> ${hatData.price}</p> 
                     <p className="hat_names"><b>Quantity:</b> {hatData.quantity}</p>
                     <p className="hat_names"><b>Description:</b> {hatData.description}</p>
